@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name" translatable="false">ScrollViewExercise</string>
+    <string name="title">High cientists about \nScience computing</string>
+    <string name="alan_turing">Alan Turing is considered the father of computing, having developed systems and concepts that served as the basis for current technology.
+         He worked for British intelligence during World War II, with the aim of translating Nazi texts, and created artificial intelligence.
+         Alan Turing was born on June 23, 1912, in the city of Paddington, England. He was the son of an Indian Civil Service official, Julius Mathison, and Ethel Sara Stoney.
+         With great ease in mathematics at age 15, Turing solved complex problems without ever having studied calculus. At 19 he graduated in mathematics from Cambridge University, ready to start a trajectory that is perpetuated for generations.</string>
+    <string name="name_alan_turing" translatable="false">Alan Turing</string>
+    <string name="name_john_von_newmann" translatable="false">John Von Newmann</string>
+    <string name="john_von_newmann">The complexity is partly due to the existence of many sources of information, some of which are inaccessible,
+        others which are at variance or controversial. However, the main cause of this complexity is the richness of von Neumanns contributions. Its spectrum includes several areas of Mathematics, Applied Mathematics, Physics, Meteorology, Economics and Computing. In many cases, his contributions went far beyond solving problems proposed by others, opening up new areas of research and launching new problems. Very personal description of von Neumanns contributions was made by his friends and collaborators Ulam (1958) and Halmos (1973). Various works dedicated to von Neumanns contributions can be found in the special issue of the journal Annals of the History of Computing, as well as in the Proceedings of an American Mathematical Society symposium (Glimm et al., 1990b) held in 1990. The environment in which von Neumann was raised and educated is described by his brother Nicholas A. Vonneuman
+    </string>
+</resources>

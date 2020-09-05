@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#303030">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,13 +21,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title"
                 android:textSize="26dp"
-                android:textColor="#000"
+                android:textColor="#fff"
                 android:layout_gravity="center_horizontal"
                 android:textAlignment="center"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#f00"
+                android:textColor="#0f0"
                 android:text="@string/name_alan_turing"
                 android:textSize="26dp"
                 android:layout_gravity="center_horizontal"
@@ -47,12 +48,12 @@
                 android:justificationMode="inter_word"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:textColor="#303030"/>
+                android:textColor="#fff"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="#f00"
+                android:textColor="#0f0"
                 android:text="@string/name_alan_turing"
                 android:textSize="26dp"
                 android:layout_gravity="center_horizontal"
@@ -74,7 +75,7 @@
                 android:justificationMode="inter_word"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:textColor="#303030"/>
+                android:textColor="#fff"/>
 
         </LinearLayout>
 
