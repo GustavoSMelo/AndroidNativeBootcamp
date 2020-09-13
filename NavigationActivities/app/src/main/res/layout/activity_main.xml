@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#7159ac">
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="#fff"
+        android:textSize="18pt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent
+"/>
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:hint="Email"
+        android:textSize="12pt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="15dp"
+        android:textColor="#000"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:textColor="#000"
+        android:hint="Name"
+        android:textSize="12pt"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="15dp"
+        android:inputType="text"/>
+    <Button
+        android:id="@+id/btnTransition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Here"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="#353535"
+        android:textColor="#fff"
+        android:layout_margin="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

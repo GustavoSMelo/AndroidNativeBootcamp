@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Primeiro Numero"
+        android:textAlignment="center"
+        android:textSize="16pt"
+        />
+
+
+    <EditText
+        android:id="@+id/txtN1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtResult"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Primeiro Numero"
+        />
+
+    <EditText
+        android:id="@+id/txtN2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtN1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Segundo Numero"
+        />
+
+    <Button
+        android:id="@+id/btnSoma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mais"
+        app:layout_constraintTop_toBottomOf="@+id/txtN2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnMenos"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/btnMenos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menos"
+        app:layout_constraintTop_toBottomOf="@+id/txtN2"
+        app:layout_constraintLeft_toRightOf="@+id/btnSoma"
+        android:layout_marginTop="30dp"
+        app:layout_constraintRight_toLeftOf="@+id/btnDiv"
+        />
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divisao"
+        app:layout_constraintTop_toBottomOf="@+id/txtN2"
+        app:layout_constraintLeft_toRightOf="@+id/btnMenos"
+        app:layout_constraintRight_toLeftOf="@+id/btnMult"
+        android:layout_marginTop="30dp"
+        />
+    <Button
+        android:id="@+id/btnMult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vezes"
+        app:layout_constraintTop_toBottomOf="@+id/txtN2"
+        app:layout_constraintLeft_toRightOf="@+id/btnDiv"
+        android:layout_marginTop="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
