@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">ClassFiveExercise</string>
+    <string name="btnNameTempo">Tempo</string>
+    <string name="btnNameVolume">Volume</string>
+    <string name="btnNamePeso">Peso</string>
+    <string name="btnNameArea">Area</string>
+    <string name="btnNameComprimento">Comprimento</string>
+    <string name="btnNameTemperatura">Temperatura</string>
+    <string-array name="arryTime">
+        <item></item>
+        <item>milisegundo</item>
+        <item>segundo</item>
+        <item>minuto</item>
+        <item>hora</item>
+        <item>dia</item>
+    </string-array>
+
+    <string-array name="arryVolume">
+        <item></item>
+        <item>Litros</item>
+        <item>Centimetros</item>
+        <item>Decimetros</item>
+        <item>Metros</item>
+        <item>Milimetros</item>
+    </string-array>
+
+    <string-array name="arryPeso">
+        <item></item>
+        <item>miligramas</item>
+        <item>gramas</item>
+        <item>kilogramas</item>
+        <item>libra</item>
+        <item>onca</item>
+    </string-array>
+
+    <string-array name="arryArea">
+        <item></item>
+        <item>centimetros-quadrados</item>
+        <item>decimetros-quadrados</item>
+        <item>metros-quadrados</item>
+        <item>polegadas-quadrados</item>
+        <item>pe-quadrados</item>
+    </string-array>
+
+    <string-array name="arryComprimento">
+        <item></item>
+        <item>milimetros-comprimento</item>
+        <item>centimetros-comprimento</item>
+        <item>decimetros-comprimento</item>
+        <item>metros-comprimento</item>
+        <item>kilometros-comprimento</item>
+    </string-array>
+
+    <string-array name="arryTemperatura">
+        <item></item>
+        <item>Celcius</item>
+        <item>Kelvin</item>
+        <item>fahrenheit</item>
+    </string-array>
+</resources>
