@@ -5,7 +5,7 @@
 
 <h2>This repository show my studies about android native and using a language of jetbrains, kotlin</h2>
 
-<h3>What i learned and did until now: </h3>
+## What i learned and did until now: 
 - [x] How to make layout with XML (using LinearLayout and ConstraintLayout) and styling
 - [x] How to link xml with code writed in kotlin
 - [x] Some components like TextView, EditView, ImageView, ImageBackground, Spinner, Button, Checkbox.
