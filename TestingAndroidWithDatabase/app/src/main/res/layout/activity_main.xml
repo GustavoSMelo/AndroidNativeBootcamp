@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Inform your ID here"
+        android:hint="Inform your cellphone here"
         android:padding="10dp"
         android:inputType="number"
         android:layout_margin="15dp"/>

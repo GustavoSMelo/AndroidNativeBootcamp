@@ -1,13 +1,16 @@
 package com.example.testingandroidwithdatabase
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import com.example.testingandroidwithdatabase.DBHelper.DBHelper
 import com.example.testingandroidwithdatabase.models.UserModel
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_about.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,7 +50,7 @@ class MainActivity : AppCompatActivity() {
                 txtResult.text = ""
 
                 for(i in 0 until usrList.size){
-                    txtResult.text = txtResult.text.toString() + "${usrList.get(i).getName()} ${usrList.get(i).getID()} ${usrList.get(i).getEmail()} \n"
+                    txtResult.text = txtResult.text.toString() + "${usrList.get(i).getName()} ${usrList.get(i).getCellphone()} ${usrList.get(i).getEmail()} \n"
                 }
             }
         }
@@ -62,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
             Usr.setName(txtName.text.toString())
             Usr.setEmail(txtEmail.text.toString())
-            Usr.setID(txtId.text.toString().toInt())
+            Usr.setCellphone(txtId.text.toString().toInt())
 
             db.UpdateData(Usr)
         }
@@ -75,5 +78,26 @@ class MainActivity : AppCompatActivity() {
 
             db.DeleteData(txtId.text.toString().toInt())
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.aboutMenu -> {
+                var myIntent : Intent = Intent(this, about::class.java)
+                startActivity(myIntent)
+            }
+
+            R.id.contatosMenu -> {
+                var myIntent : Intent = Intent(this, contacts::class.java)
+                startActivity(myIntent)
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

@@ -15,13 +15,13 @@ class DBHelper (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
     val TABLE_NAME="Users"
     val COL_NAME="name"
     val COL_EMAIL="email"
-    val COL_ID="ID"
+    val COL_CELLPHONE="cellphone"
 
     override fun onCreate(db: SQLiteDatabase?) {
         val CreateTable = "CREATE TABLE ${TABLE_NAME} " +
                 "(${COL_NAME} VARCHAR(80) NOT NULL, " +
                 " ${COL_EMAIL} VARCHAR(80) NOT NULL, " +
-                " ${COL_ID} INTEGER PRIMARY KEY )"
+                " ${COL_CELLPHONE} INTEGER PRIMARY KEY )"
 
         db?.execSQL(CreateTable)
     }
@@ -35,7 +35,7 @@ class DBHelper (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
         val contentValues = ContentValues()
         contentValues.put(COL_EMAIL, user.getEmail())
         contentValues.put(COL_NAME, user.getName())
-        contentValues.put(COL_ID, user.getID())
+        contentValues.put(COL_CELLPHONE, user.getCellphone())
 
         var result = db.insert(TABLE_NAME, null, contentValues)
 
@@ -60,7 +60,7 @@ class DBHelper (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
                 val usr = UserModel()
                 usr.setName(response.getString(0))
                 usr.setEmail(response.getString(1))
-                usr.setID(response.getInt(2))
+                usr.setCellphone(response.getInt(2))
                 userList.add(usr)
             }
 
@@ -74,8 +74,8 @@ class DBHelper (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
             val contentValue = ContentValues()
             contentValue.put(COL_EMAIL, User.getEmail())
             contentValue.put(COL_NAME, User.getName())
-            contentValue.put(COL_ID, User.getID())
-            db.update(TABLE_NAME,contentValue,"ID = ?", Array(1) { User.getID().toString() })
+            contentValue.put(COL_CELLPHONE, User.getCellphone())
+            db.update(TABLE_NAME,contentValue,"ID = ?", Array(1) { User.getCellphone().toString() })
 
             Toast.makeText(context, "User updated with success", Toast.LENGTH_SHORT).show()
         } catch (err : Error) {
@@ -83,13 +83,35 @@ class DBHelper (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
         }
     }
 
-    fun DeleteData (ID : Int) {
+    fun DeleteData (Cellphone : Int) {
         try {
             val db = this.writableDatabase
-            db.delete(TABLE_NAME, "ID = ?", Array(1) { ID.toString() })
+            db.delete(TABLE_NAME, "ID = ?", Array(1) { Cellphone.toString() })
             Toast.makeText(context, "User deleted with success", Toast.LENGTH_SHORT).show()
         } catch (err : Error) {
             Toast.makeText(context, "Error to delete user", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun ReadDataOrder () : ArrayList<UserModel> {
+    val db = this.writableDatabase
+    var response = db.rawQuery("SELECT * FROM  ${TABLE_NAME} ORDER BY ${COL_NAME}", null)
+
+    if (response.count <= 0){
+        Toast.makeText(context, "Any user registred in database", Toast.LENGTH_LONG).show()
+        val usrList = ArrayList<UserModel>()
+        return usrList
+    } else {
+            val userList = ArrayList<UserModel>()
+            while (response.moveToNext()){
+                val usr = UserModel()
+                usr.setName(response.getString(0))
+                usr.setEmail(response.getString(1))
+                usr.setCellphone(response.getInt(2))
+                userList.add(usr)
+            }
+
+            return userList
         }
     }
 }

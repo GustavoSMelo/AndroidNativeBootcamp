@@ -3,14 +3,14 @@ package com.example.testingandroidwithdatabase.models
 public final class UserModel {
     private var Name : String? = null
     private var Email : String? = null
-    private var ID : Int? = null
+    private var cellphone : Int? = null
 
     constructor(){}
 
     constructor(Name : String, Email : String, ID : Int){
         this.Name = Name
         this.Email = Email
-        this.ID = ID
+        this.cellphone = ID
     }
 
     fun getName() : String {
@@ -29,11 +29,15 @@ public final class UserModel {
         this.Email = Email
     }
 
-    fun getID() : Int{
-        return this.ID.toString().toInt()
+    fun getCellphone() : Int{
+        return this.cellphone.toString().toInt()
     }
 
-    fun setID(ID : Int){
-        this.ID = ID
+    fun setCellphone(cellphone : Int){
+        this.cellphone = cellphone
+    }
+
+    fun Scan() : String {
+        return "Nome: ${this.getName()}, Email: ${this.getEmail()}, Celular: ${this.getCellphone()}"
     }
 }
