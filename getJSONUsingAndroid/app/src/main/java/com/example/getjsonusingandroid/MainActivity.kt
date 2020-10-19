@@ -43,9 +43,7 @@ class MainActivity : AppCompatActivity() {
             uiThread {
                 var textList = ""
 
-                for (i in 0 until UserList.size) {
-                    textList += "${UserList.get(i).Scan()} \n\n\n"
-                }
+                UserList.map { usuario -> textList += "${usuario.Scan()} \n\n\n" }
 
                 println(textList)
                 list.text = textList
