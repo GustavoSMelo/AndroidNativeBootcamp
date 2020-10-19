@@ -75,7 +75,7 @@ class DBHelper (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
             contentValue.put(COL_EMAIL, User.getEmail())
             contentValue.put(COL_NAME, User.getName())
             contentValue.put(COL_CELLPHONE, User.getCellphone())
-            db.update(TABLE_NAME,contentValue,"ID = ?", Array(1) { User.getCellphone().toString() })
+            db.update(TABLE_NAME,contentValue,"cellphone = ?", Array(1) { User.getCellphone().toString() })
 
             Toast.makeText(context, "User updated with success", Toast.LENGTH_SHORT).show()
         } catch (err : Error) {
@@ -86,7 +86,7 @@ class DBHelper (var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
     fun DeleteData (Cellphone : Int) {
         try {
             val db = this.writableDatabase
-            db.delete(TABLE_NAME, "ID = ?", Array(1) { Cellphone.toString() })
+            db.delete(TABLE_NAME, "cellphone = ?", Array(1) { Cellphone.toString() })
             Toast.makeText(context, "User deleted with success", Toast.LENGTH_SHORT).show()
         } catch (err : Error) {
             Toast.makeText(context, "Error to delete user", Toast.LENGTH_SHORT).show()
