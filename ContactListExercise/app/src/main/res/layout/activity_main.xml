@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:id="@+id/btnContainer">
+
+        <ImageButton
+            android:id="@+id/btnPhone"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/phone"
+            android:contentDescription="phone" />
+        <ImageButton
+            android:id="@+id/btnEmail"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/email"
+            android:contentDescription="email"/>
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/btnAbout"
+        app:layout_constraintTop_toBottomOf="@+id/btnContainer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="180dp"
+        android:layout_height="80dp"
+        android:text="Sobre"
+        android:backgroundTint="#4E79D4"
+        android:layout_marginTop="35dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
