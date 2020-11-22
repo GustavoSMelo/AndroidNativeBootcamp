@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/txtCellphone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Cellphone"
+        android:textSize="14pt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textSize="14pt"
+        app:layout_constraintTop_toBottomOf="@id/txtCellphone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="14pt"
+        app:layout_constraintTop_toBottomOf="@id/txtName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/txtPassoword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="14pt"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:password="true"/>
+
+    <LinearLayout
+        android:id="@+id/FirstContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txtPassoword"
+        android:layout_margin="10dp">
+        <Button
+            android:id="@+id/btnStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Store"
+            android:backgroundTint="#E9E6DD"
+            android:textColor="#000"
+            android:layout_margin="15dp"/>
+        <Button
+            android:id="@+id/btnIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Index"
+            android:backgroundTint="#E9E6DD"
+            android:textColor="#000" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/secondContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/FirstContainer"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:backgroundTint="#E9E6DD"
+            android:textColor="#000"
+            android:layout_margin="15dp"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:backgroundTint="#E9E6DD"
+            android:textColor="#000" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
