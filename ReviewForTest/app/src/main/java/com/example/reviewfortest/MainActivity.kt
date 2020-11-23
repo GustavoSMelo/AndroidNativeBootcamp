@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnIndex : Button
     lateinit var btnDelete : Button
     lateinit var btnUpdate : Button
+    lateinit var btnAPI : Button
 
     private val context = this
 
@@ -85,6 +86,13 @@ class MainActivity : AppCompatActivity() {
 
             val userManipulator = userController(context)
             userManipulator.Update(user)
+        }
+
+        btnAPI = findViewById(R.id.btnAPI)
+
+        btnAPI.setOnClickListener {
+            val myIntent = Intent(this, apiView::class.java)
+            startActivity(myIntent)
         }
     }
 }
