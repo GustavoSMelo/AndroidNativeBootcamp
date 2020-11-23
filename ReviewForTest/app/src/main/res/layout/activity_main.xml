@@ -100,5 +100,20 @@
             android:textColor="#000" />
     </LinearLayout>
 
-
+    <LinearLayout
+        android:id="@+id/thirdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/secondContainer"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnAPI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="API"
+            android:backgroundTint="#E9E6DD"
+            android:textColor="#000"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
